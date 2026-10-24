@@ -11,7 +11,7 @@ Models trained at home from BackTrack's TRAIN tab, before they go into BackTrack
 | `surveil-melody-0.1.0.gguf` | `surveil-melody-0.1.0.gguf` | 0.917 instrumental leads, 0.684 guide singer | 0.757, 0.372 |
 
 The drums file here says `general.version` 0.1.0, a version BackTrack had already released for a
-different drum model, so it ships as 0.2.0 with only that field changed. The TRAIN tab writes
-version 0.1.0 into every model it trains (BackTrack 0.6.0), so the next round will need the same
-renumbering unless that changes; a pipeline run from a terminal can set `model.version` in its
-config. How they were scored: BackTrack's `weights/README.md`.
+different drum model, so it ships as 0.2.0 with only that field changed. The TRAIN tab used to
+write 0.1.0 into every model; from BackTrack 0.6.0 it has a **Model version** per kind that starts
+at the next version after the released one (drums 0.3.0, bass and melody 0.2.0). How they were
+scored: BackTrack's `weights/README.md`.
